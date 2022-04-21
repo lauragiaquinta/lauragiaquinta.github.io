@@ -18,7 +18,6 @@ src: local('Baskerville LightA'), url('BASKRV_L.woff') format('woff');
 
   body {
     display:flex;
-    width: 100%;
     background: black;
     font-family: 'Century Gothic', 'Baskerville LightA', Times New Roman;
     line-height: 1.7em;
@@ -27,23 +26,6 @@ src: local('Baskerville LightA'), url('BASKRV_L.woff') format('woff');
     flex-direction: column;
     align-self:center;
   }
-/*=======================MEDIA QUERY================*/
-@media only screen (max width:400px) {
-  .header,
-  .box0,
-  .box1,
-  .box2,
-  .box3,
-  .footer {
-    height: 33%;
-    width:100%;
-  }
-
-  .header {
-    margin-bottom:150px;
-    margin-top: 150px;
-  }
-}
 /*=======================MENU================*/
 Menu{
   display: block;
@@ -91,14 +73,16 @@ Menu{
   background-color: black;
 }
 /*=======================HEADER================*/
-.page {
-  align-items: center;
-}
+
+
 .header {
+  display:flex;
+  align-items: stretch;
   background-image: url('images/header-bg.gif');
+  width: 100%;
   background-position:center;
   background-repeat: no-repeat;
-  margin-bottom: 500px;
+  margin-bottom: 150px;
   margin-top:100px;
   height: 270px;
   opacity: 10%;
@@ -108,33 +92,30 @@ Menu{
 
 .evidenzia {
   font-family: 'Baskerville LightA';
-  font-size: 150px;
+  font-size: 6em;
   text-align: center;
-  font-weight: 100;
 }
 /*=======================BOXES================*/
 section {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
-  width: 100vw;
 }
 
 .contenuto{
-  height: 100vh;
-  padding: 10px 10px 10px 10px;
-  align-items: center;
-  display:block;
 }
 
 .box0, .box1, .box2, .box3 {
   display: flex;
-  height:600px;
+  width:100%;
+  height:100%;
   background: white;
   margin-bottom: 100px;
   margin-right: 0;
   padding: 10px 40px 10px 20px;
+  box-sizing: border-box;
 }
 
 .box2 img{
@@ -143,8 +124,6 @@ section {
 }
 /*=======================FOOTER================*/
 .footer{
-  margin-top: 20px;
-  height:250px;;
   background:black;
   text-align: center;
   align-items:center;
@@ -177,7 +156,7 @@ section {
 /*=======================TEXT================*/
 h1 {
   font-family: 'Baskerville LightA';
-  font-size: 30px;
+  font-size: 1.5em;
   line-height: 75px;
   font-weight: lighter;
   color: white;
@@ -186,11 +165,8 @@ h1 {
 
 h2{
   font-family: 'Baskerville LightA';
-  padding-bottom:40px;
-  padding-left: 100px;
-  font-size: 130px;
+  font-size: 4em;
   text-align: left;
-  font-weight: normal;
   color:#2E2E2E;
 }
 
@@ -202,21 +178,16 @@ h3 {
 }
 
 h4 {
-  font-size: 125px;
+  font-size: 8em;
   text-align: left;
-  margin-top: 50px;
-  font-weight:600;
-  margin-bottom: 5px;
+  margin-bottom:100px;
 }
 
 h5{
   font-family: Times New Roman;
-  font-size: 125px;
-  text-align: left;
-  line-height: 0;
-  margin-left: 150px;
-  margin-top: 60px;
-  font-weight:600;
+  font-size: 8em;
+  text-align: right;
+  margin-top:100px;
 }
 
 h6{
@@ -234,15 +205,13 @@ h6{
   display: flex;
   background-color: black;
   color: white;
-  margin-top: 200px;
-  margin-bottom: 600px;
-  justify-content: center;
 }
 
 .box0 h2{
-  font-family: 'Baskerville LightA';
-  font-size: 80px;
+  font-family: 'Century Gothic';
+  font-size: 4em;
   text-align: center;
+  margin-top: 30px;
 }
 
 .box0 p{
@@ -254,158 +223,125 @@ h6{
   text-align: center;
 }
 
+.Benvenuti {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benvenuto-titolo {
+  border: 3px dashed white;
+  width: 50%;
+  text-align: center;
+  margin-top:150px;
+  margin-left: 150px;
+  padding: 20px 20px 20px 20px;
+}
+
 .Benvenuti p{
   justify-content: center;
   text-align: center;
+  line-height: 1em;
 }
 
 .benvenuti2 p{
   font-family: 'Baskerville Regukar';
   margin-top: 50px;
-margin-left:150px;
 font-size: 18px;
 font-style: italic;
 }
 .benvenuti3 p{
   margin-top:20px;
-  margin-left: 250px;
+  margin-right: 250px;
 font-size: 15px;
 }
 
 .benvenuti4 p{
 font-family: 'Baskerville LightA';
 margin-top:30px;
-margin-left: 200px;
+margin-left:10px;
 font-style: italic;
-font-size: 25px;
+font-size: 20px;
 }
 
 .benvenuti5 p{
   margin-top:20px;
   font-family:'Courrier New';
-  margin-left: 150px;
-font-size: 23px;
+  margin-left: 70px;
+font-size: 30px;
 font-style: normal;
 }
 
 .contenuto-benvenuto {
-  padding: 50px;
+  width: 50%;
   justify-content: center;
+  padding: 10px 0px 10px 100px;
+
 }
 .contenuto-benvenuto h1 {
   font-family: 'Baskerville LightA';
-  font-size: 60px;
-  margin-top: 150px;
+  font-size: 3em;
+  margin-top: 160px;
+  line-height: 0.9em;
   text-align:left;
 }
 
 .contenuto-benvenuto p{
   text-align: left;
+  font-size:1em;
+    line-height: 1em;
+    margin-bottom: 1em;
 }
-
-.box1 h2 {
-  margin-bottom: 20px;
-  padding-left: 0;
+.box1 {
+  justify-content: space-around;
 }
-
-.box1 img{
-  float:left;
-  margin-right: 100px;
-}
-
-.citazione-temperanza {
-  line-height: 20px;
-  opacity: 80%;
-  margin-left: 100px;
-}
-.citazione-temperanza p{
-  font-family: 'Baskerville LightA';
-  color: #2E2E2E;
-  text-align: left;
-  font-size: 17px;
-}
-
-.box2 img{
-  margin-left: 50px;
-}
-.citazione-mago {
-  line-height: 20px;
-  opacity: 80%;
-}
-.citazione-mago p{
-  font-family: 'Baskerville LightA';
-  color: #2E2E2E;
-  text-align: left;
-  font-size: 17px;
-  margin-left: 20px;
-}
-
-.citazione-stella {
-  line-height: 20px;
-  opacity: 80%;
-  margin-left: 100px;
-}
-.citazione-stella p{
-  font-family: 'Baskerville LightA';
-  color: #2E2E2E;
-  text-align: left;
-  font-size: 17px;
-}
-
-.box3 h2 {
-  margin-bottom: 20px;
-  padding-left: 0;
-}
-.box3 img{
-    float:left;
-    margin-right: 100px;
-}
-
-.virgolette {
+.box1 h2, .box2 h2, .box3 h2 {
   font-family: 'Times New Roman';
-  font-style: normal;
+  font-size: 9em;
+  padding: 30px 30px 30px 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.box1 img, .box3 img{
+  float:left;
+  padding: 0 50px 0 50px;
+}
+
+.citazione-temperanza, .citazione-mago, .citazione-stella {
+  opacity: 80%;
+  padding: 40px 20px 40px 20;
+}
+
+.citazione-temperanza p, .citazione-mago p, .citazione-stella p{
+  font-family: 'Baskerville LightA';
   color: #2E2E2E;
-}
-
-.descrizione-present {
-  margin-top: 60px;
-}
-
-.descrizione-present p{
-  font-family: 'Century Gothic';
-  font-size: 20px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1em;
+  width:150px;
+  height:50%;
 }
 
 .descrizione-present a{
     text-decoration: none;
     color: black;
 }
-.descrizione-past p {
+.descrizione-past p, .descrizione-present p, .descrizione-future p{
   font-family: 'Century Gothic';
-  font-size: 20px;
+  font-size: 1em;
   text-align: left;
   color: black;
   margin-top: 0;
+  padding: 10px 20px 10px 20px;
 }
 
-.descrizione-future p{
-  font-family: 'Century Gothic';
-  font-size: 20px;
-  text-align: left;
-  color: black;
-  padding-right: 10px;
-}
-
-.virgolette-stella h5{
+.virgolette {
+  display: flex;
+  font-family: 'Times New Roman';
   font-style: normal;
   color: #2E2E2E;
-  font-size: 125px;
-  text-align: left;
-  line-height: 0;
-  margin-left: 75px;
-  margin-top: 60px;
-  font-weight:600;
 }
+
 
 p{
   font-size: 20px;
@@ -422,4 +358,174 @@ ul {
 
 div {
   align-items: center;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-family: 'Century Gothic', 'Baskerville LightA', Times New Roman;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-menu li{
+  font-size: 3em;
+}
+.page {
+  margin: auto;
+  padding:0 40px 0 40px;
+}
+  .header {
+    margin-bottom: 10px;
+    align-self: center;
+    padding:40px 40px 40px 40px;
+}
+  .header h1 {
+    font-size: 3em;
+  }
+  .header h6 {
+    text-align: right;
+    flex: none;
+    font-size: 1em;
+    text-indent: 1.5em;
+    margin-right:80px;
+  }
+  .box0 {
+    justify-content: center;
+    padding:0;
+    margin:0;
+    margin-top:150px;
+  }
+
+.box1 p, .box2 p, .box3 p{
+    color: white;
+}
+
+.Benvenuti {
+  display: flex;
+  flex-direction: column;
+}
+.benvenuto-titolo h2{
+font-size:7em;
+margin-bottom: 1.2em;
+}
+.benvenuti2 p, .benvenuti3 p, .benvenuti4 p, .benvenuti5 p {
+  line-height: 2.5em;
+  font-size: 3em;
+
+}
+.benvenuto-titolo {
+  border: 3px dashed white;
+  width: 1000px;
+  height:800px;
+  text-align: center;
+  margin-top:100px;
+  margin-left:0;
+  padding: 20px 20px 20px 20px;
+}
+.contenuto-benvenuto {
+  width: 1000px;
+  height:800px;
+  padding-bottom: 1000px;
+}
+.contenuto-benvenuto h1{
+  font-size: 9em;
+}
+.contenuto-benvenuto p{
+  font-size: 4em;
+}
+
+.box1, .box2, .box3 {
+  background-color: black;
+  width:100%;
+  height: 100%;
+  justify-content: flex-start;
+  margin-top:200px;
+  flex-direction: column;
+}
+.contenuto {
+  width: 100%;
+}
+.section {
+  margin:0;
+  padding: 0;
+  align-items: center;
+}
+.citazione-temperanza, .citazione-mago, .citazione-stella {
+font-style: italic;
+width:150px;
+height:150px;
+order: -4;
+}
+
+.citazione-temperanza p, .citazione-mago p, .citazione-stella p{
+  font-family: 'Baskerville LightA';
+  text-align: center;
+  font-size: 2em;
+  opacity: 5%;
+}
+
+.box1 img, .box2 img .box3 img{
+  padding: 50px;
+margin-bottom: 50px;
+height:642px;
+width:454px;
+order:-1
+}
+
+.box2 img {
+  height:642px;
+  width:454px;
+  order: -2
+}
+
+.box3 img {
+  height:642px;
+  width:454px;
+  order:-3
+}
+.descrizione-past {
+
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.virgolette h5, .virgolette h4{
+  color: black;
+  font-size: 0.1em;
+  margin:0;
+  padding:0;
+}
+
+.descrizione-past, .descrizione-present, .descrizione-future {
+  order: -1;
+}
+
+.descrizione-past p, .descrizione-present p, .descrizione-future p{
+  font-size: 3em;
+  line-height:2em;
+ }
+
+.box1 h2, .box2 h2, .box3 h2{
+  font-size: 15em;
+  margin-top: 3em;
+  margin-bottom: 0.3em;
+}
+
+.footer h3{
+  margin-top: 300px;
+  font-size: 10em;
+  line-height: 1em;
+}
+.footer p, ul, li, a {
+font-size: 60px;
+margin-top: 20px;
+}
+.footer img {
+  width: 375px;
+  height: 375px;
+}
 }
