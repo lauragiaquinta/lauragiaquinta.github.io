@@ -73,7 +73,12 @@ Menu{
   background-color: black;
 }
 /*=======================HEADER================*/
-
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .header {
   display:flex;
@@ -318,8 +323,7 @@ font-style: normal;
   text-align: left;
   font-size: 1em;
   line-height: 1em;
-  width:150px;
-  height:50%;
+
 }
 
 .descrizione-present a{
@@ -362,7 +366,7 @@ div {
 
 @media screen and (max-width: 400px) {
   body {
-    font-family: 'Century Gothic', 'Baskerville LightA', Times New Roman;
+    font-family: 'Century Gothic', 'Baskerville LightA', 'Times New Roman';
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -381,6 +385,7 @@ div {
     padding:40px 40px 40px 40px;
 }
   .header h1 {
+    font-family: 'Baskerville LightA', Times New Roman;
     font-size: 3em;
   }
   .header h6 {
@@ -452,17 +457,19 @@ margin-bottom: 1.2em;
   align-items: center;
 }
 .citazione-temperanza, .citazione-mago, .citazione-stella {
-font-style: italic;
-width:150px;
-height:150px;
+  display:flex;
+width:450px;
+height:50%;
 order: -4;
+padding-bottom: 20px;
+justify-content: space-around;
 }
 
 .citazione-temperanza p, .citazione-mago p, .citazione-stella p{
   font-family: 'Baskerville LightA';
-  text-align: center;
+  text-align: left;
   font-size: 2em;
-  opacity: 5%;
+  opacity: 20%;
 }
 
 .box1 img, .box2 img .box3 img{
@@ -470,13 +477,13 @@ order: -4;
 margin-bottom: 50px;
 height:642px;
 width:454px;
-order:-1
+order:-1;
 }
 
 .box2 img {
   height:642px;
   width:454px;
-  order: -2
+  order: -2;
 }
 
 .box3 img {
