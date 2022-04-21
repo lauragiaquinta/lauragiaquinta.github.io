@@ -386,6 +386,7 @@ div {
 }
   .header h1 {
     font-family: 'Baskerville LightA', Times New Roman;
+    font-weight: bold;
     font-size: 3em;
   }
   .header h6 {
