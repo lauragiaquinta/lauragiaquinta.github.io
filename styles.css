@@ -517,6 +517,10 @@ order:-1;
   line-height:2em;
  }
 
+ .descrizione-present a{
+     text-decoration: none;
+     color: white;
+ }   
 .box1 h2, .box2 h2, .box3 h2{
   font-size: 15em;
   margin-top: 3em;
