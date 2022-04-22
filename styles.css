@@ -388,6 +388,9 @@ div {
   Font-family:'Times New Roman';
     font-size: 3em;
   }
+.evidenzia {
+    Font-family:'Times New Roman';
+}
   .header h6 {
     text-align: right;
     flex: none;
@@ -401,6 +404,7 @@ div {
     margin:0;
     margin-top:150px;
     padding-bottom: 150px;
+    margin-bottom: 300px;
   }
 
 .box1 p, .box2 p, .box3 p{
@@ -468,7 +472,8 @@ justify-content: space-around;
 }
 
 .citazione-temperanza p, .citazione-mago p, .citazione-stella p{
-  font-family: 'Baskerville LightA';
+  font-family: 'Times New Roman';
+  font-style: italic;
   text-align: left;
   font-size: 2em;
   opacity: 20%;
@@ -541,6 +546,7 @@ order:-1;
 font-size: 59px;
 margin-top: 125px;
 }
+
 .footer img {
   width: 375px;
   height: 375px;
